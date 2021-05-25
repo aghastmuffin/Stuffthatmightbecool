@@ -3,4 +3,4 @@ execute as @a[tag=merling] at @s if block ~ ~ ~ minecraft:air run scoreboard pla
 execute as @a[tag=merling] at @s if block ~ ~ ~ minecraft:lava run scoreboard players add @s outofwater 1
 tellraw @a[tag=merling,scores={outofwater=1..}] {"text":"You are out of water. This might cause damage","color":"red"} 
 execute at @a[tag=merling, scores={outofwater=20..}] run effect give @p instant_damage 1 1 true
-execute as @a[tag=merling] at @s if block ~ ~ ~ minecraft:water run scoreboard players remove @a[tag=merling, scores={outpfwater=1..}] outofwater 1
+execute as @a[tag=merling] at @s if block ~ ~ ~ minecraft:water run scoreboard players remove @a[tag=merling, scores={outofwater=1..}] outofwater 1
