@@ -1,6 +1,6 @@
 # Stuffthatmightbecool
 ---
-classes: \n
+classes: 
 Merling (air damage)
 ---
 Made by AghastMuffin
