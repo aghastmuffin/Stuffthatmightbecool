@@ -1,0 +1,6 @@
+execute if entity @e[tag=merling] run tellraw @a[tag=merling] [{"text":"Origin selected:","hoverEvent":{"action":"show_text","contents":[{"text":"Class Selected"}]},"clickEvent":{"action":"open_url","value":"/tellraw @p [{\"text\":\"Origin selected:\"},{\"text\":\"Merlin\",\"color\":\"aqua\",\"bold\":true,\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"text\":\"Visit  a website\"}]},\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.curseforge.com/minecraft/mc-mods/origins/files\"}}]"}},{"text":"Merlin","color":"aqua","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Visit  a website"}]},"clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/mc-mods/origins/files"}}]
+execute as @a[tag=merling] at @s if block ~ ~ ~ minecraft:air run scoreboard players add @s outofwater 1
+execute as @a[tag=merling] at @s if block ~ ~ ~ minecraft:lava run scoreboard players add @s outofwater 1
+tellraw @a[tag=merling,scores={outofwater=1..}] {"text":"You are out of water. This might cause damage","color":"red"} 
+execute at @a[tag=merling, scores={outofwater=20..}] run effect give @p instant_damage 1 1 true
+execute as @a[tag=merling] at @s if block ~ ~ ~ minecraft:water run scoreboard players remove @a[tag=merling, scores={outpfwater=1..}] outofwater 1
