@@ -1,6 +1,7 @@
 # Stuffthatmightbecool
 ---
 classes:
-Merling (out of water damage)
+-
+Merling (air damage)
 ---
 Made by AghastMuffin
